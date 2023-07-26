@@ -4,9 +4,11 @@ finished = False
 
 def place_player ():
     print ("Here I am!")
+   
     global x, y, shape
+    x, y = 400, 300
 shape = circle ((x, y), 10, filled=True, color=color. RED)
-place player()
+place_player()
 
 
 
