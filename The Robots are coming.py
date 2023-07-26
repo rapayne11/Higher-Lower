@@ -1,13 +1,14 @@
 from gasp import *
-begin_graphics()
+begin_graphics(800, 600)
 finished = False
 
 def place_player ():
     print ("Here I am!")
+    global x, y, shape
+shape = circle ((x, y), 10, filled=True, color=color. RED)
+place player()
 
-player_x= rat(0,57) *10
-player_y= rat(0,40) *10
-circle ((10 * player_x +5, 10 * player_y + 5), 5, filled = True)
+
 
 def move_player():
     print("I'm moving...")
@@ -15,17 +16,26 @@ def move_player():
 
 place_player ()
 
-
-While not finished:
-    moving_player()
-
 while True:
-    x= +4
-    y= +3
-    circle ((x,y), 5)
-    ball_x=cirlce((x,y) 5)
-    move_to
-if x> 635=break()
+    key = update_when ('key_pressed')
+    if key == 'Escape':
+        break
+    elif key == 'a':
+        move_direction = (-1,0)
+    elif key == 'w':
+        move_direction = (0,1)
+    elif key == 'd':
+        move_direction = (1,0)
+    elif key == 's':
+        move_direction = (0,-1)
+    elif key == 'q':
+        move_direction = (0,0)
+x, y = x + 20 * move_direction[0], y +20 * move_direction[1]
+   
+
+player_x +=(640 + (20 * move_direction[0])) % 640
+player_y +=(480 + (20 * move_direction[0])) % 480
+move_to(player_shape, (player_x, player_y))
 
 end_graphics ()
 
